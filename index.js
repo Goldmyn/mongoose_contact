@@ -14,9 +14,9 @@ async function connectDB() {
     // use process.env.connection string because we need to access the file in .env
     await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
     console.log("Connection to database successful");
-    // await addContact();
-    // await findContact();
-    // await updateContact();
+    await addContact();
+    await findContact();
+    await updateContact();
     await deleteContact();
   } catch (error) {
     console.log(error);
